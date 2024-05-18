@@ -13,7 +13,7 @@ int squareSumOfDigits(int n) {
     return sum;
 }
 
-bool isHappyNumber(int n, std::unordered_set<int>& visited) {
+bool isHappyNumber(int n, unordered_set<int>& visited) {
     if (n == 1) {
         return true;
     }
