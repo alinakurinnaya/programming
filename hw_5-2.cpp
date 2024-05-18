@@ -12,10 +12,10 @@ void merge(vector<int>& data, int start, int mid, int end) {
     vector<int> left(n1);
     vector<int> right(n2);
     
-    for (int i = 0; i < n1; ++i) {
+    for (int i = 0; i < n1; i++) {
         left[i] = data[start + i];
     }
-    for (int j = 0; j < n2; ++j) {
+    for (int j = 0; j < n2; j++) {
         right[j] = data[mid + 1 + j];
     }
     
@@ -24,24 +24,24 @@ void merge(vector<int>& data, int start, int mid, int end) {
     while (i < n1 && j < n2) {
         if (left[i] <= right[j]) {
             data[k] = left[i];
-            ++i;
+            i++;
         } else {
             data[k] = right[j];
-            ++j;
+            j++;
         }
-        ++k;
+        k++;
     }
     
     while (i < n1) {
         data[k] = left[i];
-        ++i;
-        ++k;
+        i++;
+        k++;
     }
     
     while (j < n2) {
         data[k] = right[j];
-        ++j;
-        ++k;
+        j++;
+        k++;
     }
 }
 
